@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Home page for Esomojumi Emmanuel Sunday. HTML, CSS, JavaScript fundamentals.">
+  <meta name="author" content="Esomojumi Emmanuel Sunday">
+  <title>WDD 131 – Dynamic Web Fundamentals – Esomojumi Emmanuel Sunday</title>
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
-    <h1>My name is Emmanuel and this is my webpage.</h1>
+  <header>
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+
+    <nav>
+      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+      <a href="final-project/">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Esomojumi Emmanuel Sunday</h1>
+
+    <section class="card">
+      <h2>About Me</h2>
+
+      <div class="card-content">
+        <p>
+          My name is Emmanuel. I am a detail-oriented IT Support Specialist, ICT Instructor, and Software Programming student with hands-on experience in technical troubleshooting, system setup, customer support, and user training. I have a strong foundation in Python, Flutter, and web development, with backend basics using Flask and SQL. I currently teach Digital Literacy while building practical software projects, including mobile applications, data-driven Python tools, and responsive web interfaces. 
+          I am passionate about technology, continuous learning, and using software solutions to solve real-world problems.
+        </p>
+
+        <img src="images/profile.jpg" alt="Profile photo of Esomojumi Emmanuel Sunday">
+      </div>
+        
+
+      <h3>Lagos, Nigeria</h3>
+
+      <hr>
+
+      <div class="location">
+        <img src="images/nigeria-flag.jpg" alt="Flag image">
+        <p>
+          Nigeria is located in West Africa and is the most populous country in Africa.
+          It is known for its diverse cultures, rich history, and growing technology ecosystem.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+        <li><a href="https://picsum.photos/" target="_blank">Lorem Picsum</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="currentyear"></span> Esomojumi Emmanuel Sunday | Nigeria
+    </p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
