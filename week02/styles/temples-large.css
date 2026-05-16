@@ -1,0 +1,28 @@
+@media screen and (min-width: 768px) {
+
+  /* -----------------------------
+     Header & Navigation (Large)
+  -------------------------------- */
+  #menu-button {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  nav a {
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+
+  /* -----------------------------
+     Gallery Grid (Large)
+  -------------------------------- */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+}
