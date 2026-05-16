@@ -4,8 +4,11 @@
 :root {
   --primary-color: #4b136b;
   --text-light: #ffffff;
-  --text-dark: #222;
+  --text-dark: #222222;
   --background-light: #ffffff;
+
+  --nav-border-light: #ffffff33;  
+  --nav-hover-light: #ffffff26;   
 }
 
 * {
@@ -71,11 +74,11 @@ nav a {
   text-decoration: none;
   padding: 0.75rem;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--nav-border-light);
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--nav-hover-light);
 }
 
 /* Show navigation when active */
