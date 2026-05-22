@@ -45,6 +45,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+  color: #f0c040;
 }
 
 main {
@@ -106,11 +107,26 @@ h1 {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.location figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
 }
 
 .location img {
   width: 80px;
   border: 1px solid #ccc;
+}
+
+.location figcaption {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  text-align: center;
 }
 
 ul {
