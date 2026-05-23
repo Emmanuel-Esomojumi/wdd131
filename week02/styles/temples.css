@@ -6,9 +6,8 @@
   --text-light: #ffffff;
   --text-dark: #222222;
   --background-light: #ffffff;
-
-  --nav-border-light: #ffffff33;  
-  --nav-hover-light: #ffffff26;   
+  --nav-border-light: #ffffff33;
+  --nav-hover-light: #ffffff26;
 }
 
 * {
@@ -40,6 +39,7 @@ header {
   color: var(--text-light);
 }
 
+/* flex-wrap: wrap allows the nav to drop below the title row on mobile */
 .header-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -47,10 +47,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-header h1 {
+header h2 {
   font-size: 1.4rem;
+  color: var(--text-light);
 }
 
 /* Hamburger Button */
@@ -62,10 +64,12 @@ header h1 {
   cursor: pointer;
 }
 
-/* Navigation (mobile default hidden) */
+/* Nav hidden by default on mobile —
+   width: 100% makes it span the full row when it opens */
 nav {
   display: none;
   flex-direction: column;
+  width: 100%;
   background-color: var(--primary-color);
 }
 
@@ -81,7 +85,7 @@ nav a:hover {
   background-color: var(--nav-hover-light);
 }
 
-/* Show navigation when active */
+/* JS toggles this class to show the menu */
 nav.open {
   display: flex;
 }
@@ -101,7 +105,7 @@ main h1 {
 }
 
 /* -----------------------------
-   Gallery Grid (Mobile)
+   Gallery Grid (Mobile — 1 column)
 -------------------------------- */
 .gallery {
   display: grid;
