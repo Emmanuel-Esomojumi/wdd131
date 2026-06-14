@@ -1,0 +1,138 @@
+/* -----------------------------
+   Root & Reset
+-------------------------------- */
+:root {
+  --primary-color: #cc0000;
+  --secondary-color: #ffffff;
+  --accent-color: #1a1a1a;
+  --background-color: #f5f5f5;
+  --text-dark: #222222;
+  --card-bg: rgba(255, 255, 255, 0.92);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-dark);
+}
+
+/* -----------------------------
+   Header
+-------------------------------- */
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* -----------------------------
+   Hero — mobile: image stacked, cards below
+-------------------------------- */
+.hero {
+  position: relative;
+}
+
+.hero picture{
+  display:block;
+}
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* cards stacked below image on mobile */
+.hero-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--background-color);
+}
+
+/* -----------------------------
+   Cards
+-------------------------------- */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.card h2 {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* -----------------------------
+   Data Card Table
+-------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+table td.label {
+  font-weight: 700;
+  text-align: right;
+  color: var(--accent-color);
+  width: 45%;
+}
+
+/* -----------------------------
+   Weather Card
+-------------------------------- */
+.weather-icon-svg {
+  display: block;
+  width: 60px;
+  height: auto;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.weather-details p {
+  margin: 0.4rem 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.label {
+  font-weight: 700;
+}
+
+/* -----------------------------
+   Footer
+-------------------------------- */
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}

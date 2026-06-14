@@ -1,0 +1,58 @@
+@media screen and (min-width: 768px) {
+
+  /* -----------------------------
+     Hero — cards overlaid on image
+  -------------------------------- */
+  .hero {
+    position: relative;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 600px;
+  }
+
+  /* cards float over the hero image */
+  .hero-cards {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    gap: 1.5rem;
+  }
+
+  .data-card {
+    flex: 1.5;
+    max-width: 380px;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .weather-card {
+    flex: 1;
+    max-width: 250px;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  /* -----------------------------
+     Weather — hide SVG, show emoticon
+  -------------------------------- */
+  .weather-icon-svg {
+    display: none;
+  }
+
+  /* pseudo-element emoticon after Weather heading */
+  .weather-heading::after {
+    content: " ⛅";
+    font-size: 1.3rem;
+  }
+
+}

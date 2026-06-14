@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Banff National Park, Canada – a breathtaking wilderness of mountains, wildlife, and pristine nature.">
+  <meta name="author" content="Esomojumi Emmanuel Sunday">
+  <title>Banff National Park, Canada – Place Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="styles/place-large.css">
+
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Banff National Park, Canada</h1>
+  </header>
+
+  <!-- Hero with overlaid cards -->
+  <div class="hero">
+    <picture>
+      <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+      <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+      <img src="images/hero-small.webp" alt="Brown bear in Banff National Park, Canada" width="1500" height="750">
+    </picture>
+
+    <!-- Cards overlay on hero in wide view -->
+    <div class="hero-cards">
+
+      <!-- Data Card -->
+      <section class="card data-card">
+        <h2>Data</h2>
+        <table>
+          <tr><td class="label">Area</td><td>9,984,670 sq km</td></tr>
+          <tr><td class="label">Population</td><td>38 million</td></tr>
+          <tr><td class="label">Capital</td><td>Ottawa</td></tr>
+          <tr><td class="label">Languages</td><td>English, French</td></tr>
+          <tr><td class="label">Currency</td><td>Canadian Dollar</td></tr>
+          <tr><td class="label">Time Zone</td><td>UTC-3.5 to UTC-8</td></tr>
+          <tr><td class="label">Calling Code</td><td>+1</td></tr>
+          <tr><td class="label">Internet TLD</td><td>.ca</td></tr>
+        </table>
+      </section>
+
+      <!-- Weather Card -->
+      <section class="card weather-card">
+        <h2 class="weather-heading">Weather</h2>
+
+        <!-- SVG icon — mobile only -->
+        <img src="images/weather-icon.svg" alt="Partly cloudy weather icon" class="weather-icon-svg">
+
+        <div class="weather-details">
+          <p><span class="label">Temperature:</span> 5°C</p>
+          <p><span class="label">Wind Speed:</span> 20 km/h</p>
+          <p><span class="label">Description:</span> Partly Cloudy</p>
+          <p><span class="label">Wind Chill:</span> <span id="wind-chill"></span></p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© <span id="currentyear"></span> Esomojumi Emmanuel Sunday | Banff, Canada</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
