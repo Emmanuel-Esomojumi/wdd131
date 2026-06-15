@@ -1,0 +1,23 @@
+@media screen and (min-width: 768px) {
+
+  main {
+    max-width: 700px;
+  }
+
+  .rating-group {
+    gap: 1.5rem;
+  }
+
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+  }
+
+  input[type="submit"],
+  .back-link {
+    width: auto;
+    padding: 0.8rem 3rem;
+    margin: 0 auto;
+  }
+}

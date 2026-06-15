@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/form.css">
+  <link rel="stylesheet" href="styles/form-large.css">
   <script src="scripts/form.js" defer></script>
 </head>
 
@@ -31,34 +32,30 @@
         </select>
       </div>
 
-      <!-- Overall Rating -->
-      <div class="form-group">
-        <fieldset>
-          <legend>Overall Rating <span class="required">*</span></legend>
-          <div class="rating-group">
-            <label class="star-label">
-              <input type="radio" name="rating" id="rating1" value="1" required>
-              <span>☆</span>
-            </label>
-            <label class="star-label">
-              <input type="radio" name="rating" id="rating2" value="2">
-              <span>☆☆</span>
-            </label>
-            <label class="star-label">
-              <input type="radio" name="rating" id="rating3" value="3">
-              <span>☆☆☆</span>
-            </label>
-            <label class="star-label">
-              <input type="radio" name="rating" id="rating4" value="4">
-              <span>☆☆☆☆</span>
-            </label>
-            <label class="star-label">
-              <input type="radio" name="rating" id="rating5" value="5">
-              <span>☆☆☆☆☆</span>
-            </label>
-          </div>
-        </fieldset>
-      </div>
+
+    <!-- Overall Rating -->
+    <div class="form-group">
+    <fieldset>
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <div class="rating-group">
+        <input type="radio" name="rating" id="rating1" value="1" required>
+        <label for="rating1">☆</label>
+
+        <input type="radio" name="rating" id="rating2" value="2" required>
+        <label for="rating2">☆☆</label>
+
+        <input type="radio" name="rating" id="rating3" value="3" required>
+        <label for="rating3">☆☆☆</label>
+
+        <input type="radio" name="rating" id="rating4" value="4" required>
+        <label for="rating4">☆☆☆☆</label>
+
+        <input type="radio" name="rating" id="rating5" value="5" required>
+        <label for="rating5">☆☆☆☆☆</label>
+        </div>
+    </fieldset>
+    </div>
+
 
       <!-- Date of Installation -->
       <div class="form-group">
@@ -66,19 +63,28 @@
         <input type="date" id="install-date" name="install-date" required>
       </div>
 
-      <!-- Useful Features -->
-      <div class="form-group">
-        <fieldset>
-          <legend>Which features did you find useful? <em class="optional">(Check all that apply)</em></legend>
-          <div class="checkbox-group">
-            <label><input type="checkbox" id="reliability" name="features" value="reliability"> Reliability</label>
-            <label><input type="checkbox" id="ease-of-setup" name="features" value="ease-of-setup"> Ease of Setup</label>
-            <label><input type="checkbox" id="performance" name="features" value="performance"> Performance</label>
-            <label><input type="checkbox" id="value-for-money" name="features" value="value-for-money"> Value for Money</label>
-            <label><input type="checkbox" id="innovation" name="features" value="innovation"> Innovation</label>
-          </div>
-        </fieldset>
-      </div>
+    <!-- Useful Features -->
+    <div class="form-group">
+    <fieldset>
+        <legend>Which features did you find useful? <em class="optional">(Check all that apply)</em></legend>
+        <div class="checkbox-group">
+        <input type="checkbox" id="reliability" name="features" value="reliability">
+        <label for="reliability">Reliability</label>
+
+        <input type="checkbox" id="ease-of-setup" name="features" value="ease-of-setup">
+        <label for="ease-of-setup">Ease of Setup</label>
+
+        <input type="checkbox" id="performance" name="features" value="performance">
+        <label for="performance">Performance</label>
+
+        <input type="checkbox" id="value-for-money" name="features" value="value-for-money">
+        <label for="value-for-money">Value for Money</label>
+
+        <input type="checkbox" id="innovation" name="features" value="innovation">
+        <label for="innovation">Innovation</label>
+        </div>
+    </fieldset>
+    </div>
 
       <!-- Written Review -->
       <div class="form-group">

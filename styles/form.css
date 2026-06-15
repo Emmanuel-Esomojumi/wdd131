@@ -20,6 +20,9 @@
   box-sizing: border-box;
 }
 
+/* -----------------------------
+   Base Layout
+-------------------------------- */
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background);
@@ -27,9 +30,6 @@ body {
   line-height: 1.6;
 }
 
-/* -----------------------------
-   Header
--------------------------------- */
 header {
   background-color: var(--primary);
   color: var(--text-light);
@@ -42,9 +42,6 @@ header h1 {
   letter-spacing: 1px;
 }
 
-/* -----------------------------
-   Main
--------------------------------- */
 main {
   max-width: 600px;
   margin: 2rem auto;
@@ -54,7 +51,8 @@ main {
 /* -----------------------------
    Form Card
 -------------------------------- */
-form {
+form,
+.confirmation-card {
   background-color: var(--card-bg);
   border-radius: 8px;
   padding: 2rem;
@@ -86,10 +84,8 @@ textarea {
   padding: 0.6rem 0.8rem;
   border: 1px solid var(--border);
   border-radius: 4px;
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
   font-size: 0.95rem;
-  color: var(--text-dark);
-  background-color: var(--card-bg);
 }
 
 select:focus,
@@ -115,39 +111,17 @@ fieldset {
 legend {
   font-weight: 700;
   color: var(--primary);
-  padding: 0 0.4rem;
 }
 
 /* -----------------------------
-   Star Rating
+   Rating & Checkboxes
 -------------------------------- */
 .rating-group {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
   margin-top: 0.5rem;
 }
 
-.star-label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
-  cursor: pointer;
-  font-size: 0.85rem;
-  color: var(--primary);
-  font-weight: 400;
-}
-
-.star-label input {
-  width: auto;
-  cursor: pointer;
-  accent-color: var(--primary);
-}
-
-/* -----------------------------
-   Checkboxes
--------------------------------- */
 .checkbox-group {
   display: flex;
   flex-direction: column;
@@ -160,33 +134,32 @@ legend {
   align-items: center;
   gap: 0.5rem;
   font-weight: 400;
-  color: var(--text-dark);
   cursor: pointer;
 }
 
-.checkbox-group input[type="checkbox"] {
-  width: auto;
+input[type="radio"],
+input[type="checkbox"] {
   accent-color: var(--primary);
 }
 
 /* -----------------------------
-   Required & Optional Markers
+   Required / Optional
 -------------------------------- */
 .required {
   color: var(--required);
-  font-weight: 700;
 }
 
 .optional {
   color: var(--optional);
   font-size: 0.85rem;
-  font-weight: 400;
 }
 
 /* -----------------------------
    Submit Button
 -------------------------------- */
-input[type="submit"] {
+input[type="submit"],
+.back-link {
+  display: block;
   width: 100%;
   padding: 0.8rem;
   background-color: var(--primary);
@@ -195,59 +168,12 @@ input[type="submit"] {
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 700;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0.5px;
-}
-
-input[type="submit"]:hover {
-  background-color: var(--primary-dark);
-}
-
-/* -----------------------------
-   Confirmation Card
--------------------------------- */
-.confirmation-card {
-  background-color: var(--card-bg);
-  border-radius: 8px;
-  padding: 2rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.confirm-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.confirmation-card h2 {
-  color: var(--primary);
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
-}
-
-.confirmation-card p {
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
-}
-
-.review-count {
-  font-weight: 700;
-  color: var(--primary);
-  font-size: 1.1rem;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 1.2rem;
-  padding: 0.7rem 1.5rem;
-  background-color: var(--primary);
-  color: var(--text-light);
-  border-radius: 4px;
   text-decoration: none;
-  font-weight: 700;
+  cursor: pointer;
 }
 
+input[type="submit"]:hover,
 .back-link:hover {
   background-color: var(--primary-dark);
 }
@@ -262,8 +188,4 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
   font-size: 0.9rem;
-}
-
-footer p {
-  margin: 0.2rem 0;
 }
