@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit your product review for WDD 131. Rate your experience, share useful features, and provide written feedback.">
+  <meta name="author" content="Esomojumi Sunday Emmanuel">
+  <title>Product Review Form – WDD 131</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form action="review.html" method="get">
+
+      <!-- Product Name -->
+      <div class="form-group">
+        <label for="product-name">Product Name <span class="required">*</span></label>
+        <select id="product-name" name="product-name" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </div>
+
+      <!-- Overall Rating -->
+      <div class="form-group">
+        <fieldset>
+          <legend>Overall Rating <span class="required">*</span></legend>
+          <div class="rating-group">
+            <label class="star-label">
+              <input type="radio" name="rating" id="rating1" value="1" required>
+              <span>☆</span>
+            </label>
+            <label class="star-label">
+              <input type="radio" name="rating" id="rating2" value="2">
+              <span>☆☆</span>
+            </label>
+            <label class="star-label">
+              <input type="radio" name="rating" id="rating3" value="3">
+              <span>☆☆☆</span>
+            </label>
+            <label class="star-label">
+              <input type="radio" name="rating" id="rating4" value="4">
+              <span>☆☆☆☆</span>
+            </label>
+            <label class="star-label">
+              <input type="radio" name="rating" id="rating5" value="5">
+              <span>☆☆☆☆☆</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Date of Installation -->
+      <div class="form-group">
+        <label for="install-date">Date of Installation <span class="required">*</span></label>
+        <input type="date" id="install-date" name="install-date" required>
+      </div>
+
+      <!-- Useful Features -->
+      <div class="form-group">
+        <fieldset>
+          <legend>Which features did you find useful? <em class="optional">(Check all that apply)</em></legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="reliability" name="features" value="reliability"> Reliability</label>
+            <label><input type="checkbox" id="ease-of-setup" name="features" value="ease-of-setup"> Ease of Setup</label>
+            <label><input type="checkbox" id="performance" name="features" value="performance"> Performance</label>
+            <label><input type="checkbox" id="value-for-money" name="features" value="value-for-money"> Value for Money</label>
+            <label><input type="checkbox" id="innovation" name="features" value="innovation"> Innovation</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Written Review -->
+      <div class="form-group">
+        <label for="written-review">Written Review <em class="optional">(Optional)</em></label>
+        <textarea id="written-review" name="written-review" rows="5" placeholder="Share your experience with this product..."></textarea>
+      </div>
+
+      <!-- User Name -->
+      <div class="form-group">
+        <label for="user-name">Your Name <em class="optional">(Optional)</em></label>
+        <input type="text" id="user-name" name="user-name" placeholder="Enter your name">
+      </div>
+
+      <!-- Submit -->
+      <div class="form-group">
+        <input type="submit" value="Post Review">
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> Esomojumi Sunday Emmanuel | Lagos, Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
