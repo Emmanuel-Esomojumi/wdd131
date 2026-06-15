@@ -54,7 +54,7 @@ header {
 
 .tagline {
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* -----------------------------
@@ -88,6 +88,12 @@ main {
   border-bottom: 1px solid var(--border);
 }
 
+.plan-section h3 {
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .plan-section p {
   margin-bottom: 0.8rem;
 }
@@ -96,6 +102,7 @@ main {
 .plan-section ol {
   padding-left: 1.5rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .plan-section li {
@@ -105,6 +112,12 @@ main {
 .domain {
   color: var(--primary-dark);
   font-size: 0.9rem;
+}
+
+.usage {
+  font-size: 0.78rem;
+  color: #555555;
+  margin-top: 0.2rem;
 }
 
 /* -----------------------------
@@ -129,11 +142,12 @@ main {
   margin-bottom: 0.4rem;
 }
 
-.usage {
-  font-size: 0.78rem;
-  color: #555;
-  margin-top: 0.2rem;
-}
+/* swatch color classes — no inline styles */
+.swatch-primary { background-color: #008751; }
+.swatch-dark-green { background-color: #005a35; }
+.swatch-white { background-color: #ffffff; border: 1px solid #cccccc; }
+.swatch-light-gray { background-color: #f5f5f5; border: 1px solid #cccccc; }
+.swatch-charcoal { background-color: #222222; }
 
 /* -----------------------------
    Typography Demo
@@ -153,7 +167,7 @@ main {
 
 .font-name {
   font-size: 0.8rem;
-  color: #777;
+  color: #777777;
   margin-bottom: 0.4rem;
 }
 
@@ -187,16 +201,11 @@ main {
   gap: 2rem;
   margin-top: 1rem;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .wireframe-wrap {
   text-align: center;
-}
-
-.wireframe-wrap h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
 }
 
 .wireframe-svg {
@@ -205,13 +214,11 @@ main {
   background-color: var(--light-gray);
 }
 
-/* mobile wireframe smaller */
-.wireframe-wrap:first-child .wireframe-svg {
+.mobile-svg {
   width: 180px;
 }
 
-/* desktop wireframe wider */
-.wireframe-wrap:last-child .wireframe-svg {
+.desktop-svg {
   width: 360px;
 }
 
