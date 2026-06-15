@@ -208,18 +208,11 @@ main {
   text-align: center;
 }
 
-.wireframe-svg {
+.wireframe-img {
+  width: 100%;
+  max-width: 400px;
   border: 2px solid var(--primary);
   border-radius: 6px;
-  background-color: var(--light-gray);
-}
-
-.mobile-svg {
-  width: 180px;
-}
-
-.desktop-svg {
-  width: 360px;
 }
 
 /* -----------------------------
