@@ -1,0 +1,228 @@
+/* -----------------------------
+   Root & Reset
+-------------------------------- */
+:root {
+  --primary: #008751;
+  --primary-dark: #005a35;
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --text-dark: #222222;
+  --border: #cccccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* -----------------------------
+   Header
+-------------------------------- */
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo-text {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* -----------------------------
+   Main
+-------------------------------- */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* -----------------------------
+   Plan Sections
+-------------------------------- */
+.plan-section {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 5px solid var(--primary);
+}
+
+.plan-section h2 {
+  font-family: "Merriweather", serif;
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.plan-section p {
+  margin-bottom: 0.8rem;
+}
+
+.plan-section ul,
+.plan-section ol {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.plan-section li {
+  margin-bottom: 0.6rem;
+}
+
+.domain {
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+}
+
+/* -----------------------------
+   Color Swatches
+-------------------------------- */
+.color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.color-swatch {
+  text-align: center;
+  width: 130px;
+}
+
+.swatch {
+  width: 100%;
+  height: 60px;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+}
+
+.usage {
+  font-size: 0.78rem;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+/* -----------------------------
+   Typography Demo
+-------------------------------- */
+.font-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.font-block {
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.font-name {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.4rem;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+/* -----------------------------
+   Wireframes
+-------------------------------- */
+.wireframe-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.wireframe-wrap {
+  text-align: center;
+}
+
+.wireframe-wrap h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.wireframe-svg {
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  background-color: var(--light-gray);
+}
+
+/* mobile wireframe smaller */
+.wireframe-wrap:first-child .wireframe-svg {
+  width: 180px;
+}
+
+/* desktop wireframe wider */
+.wireframe-wrap:last-child .wireframe-svg {
+  width: 360px;
+}
+
+/* -----------------------------
+   Footer
+-------------------------------- */
+footer {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}

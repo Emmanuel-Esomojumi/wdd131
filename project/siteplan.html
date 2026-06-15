@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zone – Interactive Product Showcase site plan. A planning document for a dynamic, data-driven product showcase website built with HTML, CSS, and JavaScript.">
+  <meta name="author" content="Esomojumi Sunday Emmanuel">
+  <title>Zone – Site Plan | WDD 131</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/siteplan.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">⚙️</span>
+        <span class="logo-text">Zone</span>
+      </div>
+      <p class="tagline">Interactive Product Showcase – Website Planning Document</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Site Name -->
+    <section class="plan-section">
+      <h2>Site Name</h2>
+      <p><strong>Zone – Interactive Product Showcase</strong></p>
+      <p>
+        The name <em>Zone</em> represents a modern, flexible digital space where users 
+        can explore and interact with curated products. It was chosen for its simplicity, 
+        clarity, and brand potential. The descriptive subtitle — Interactive Product 
+        Showcase — clarifies the website's purpose immediately, ensuring visitors 
+        understand what the site offers before engaging with any content.
+      </p>
+      <p>
+        This naming approach serves three purposes simultaneously: it establishes a 
+        recognizable identity, makes the site's purpose explicit, and aligns cleanly 
+        with the assignment's learning outcomes around dynamic, JavaScript-driven content.
+      </p>
+      <p class="domain">Optional domain: <em>zone-showcase.com</em></p>
+    </section>
+
+    <!-- Site Purpose -->
+    <section class="plan-section">
+      <h2>Site Purpose</h2>
+      <p>
+        Zone is an informational, interactive product showcase website designed to 
+        demonstrate modern web development principles through a real-world use case. 
+        The site presents a curated collection of products through a dynamic, 
+        data-driven interface — showcasing how JavaScript can render content, manage 
+        user interactions, filter data, and personalize experiences in a clean, 
+        accessible, and responsive way.
+      </p>
+      <p>
+        The site provides the following to its users:
+      </p>
+      <ul>
+        <li>A dynamically generated product gallery powered by JavaScript arrays and objects</li>
+        <li>Category filtering so users can quickly find relevant products</li>
+        <li>A preference-saving feature using localStorage</li>
+        <li>A contact and inquiry form for user interaction</li>
+        <li>A fully responsive layout optimized for both mobile and desktop views</li>
+        <li>Accessible design following WCAG AA color contrast standards</li>
+      </ul>
+      <p>
+        While product inspiration may be locally influenced, the website is designed 
+        for a global audience — emphasizing universal usability, adaptability, 
+        and scalability.
+      </p>
+    </section>
+
+    <!-- Scenarios -->
+    <section class="plan-section">
+      <h2>Target Audience &amp; Scenarios</h2>
+      <p>
+        The following scenarios represent real questions from Zone's target audience 
+        and drive the site's content decisions:
+      </p>
+      <ol>
+        <li>
+          <strong>Scenario 1 — Mobile Shopper:</strong>
+          A user visits the site on a mobile device and wants to browse products 
+          by category and quickly view key details without scrolling through 
+          irrelevant items. How does the site make that experience fast and intuitive?
+        </li>
+        <li>
+          <strong>Scenario 2 — Curious Student:</strong>
+          A web development student explores the website to understand how JavaScript 
+          dynamically generates content, filters arrays, and saves user preferences 
+          using localStorage. Where can they see these features in action?
+        </li>
+        <li>
+          <strong>Scenario 3 — First-time Visitor:</strong>
+          A visitor lands on the home page for the first time and wants to understand 
+          immediately what the site is about and how to navigate it. 
+          Does the layout communicate purpose and usability within the first few seconds?
+        </li>
+      </ol>
+    </section>
+
+    <!-- Color Schema -->
+    <section class="plan-section">
+      <h2>Color Schema</h2>
+      <p>
+        The color palette was selected to convey trust, clarity, and modern usability. 
+        Colors are applied consistently across all pages to maintain visual identity.
+      </p>
+
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="swatch" style="background-color: #008751;"></div>
+          <p><strong>#008751</strong></p>
+          <p>Primary Green</p>
+          <p class="usage">Header, footer, section headings, buttons, active states</p>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background-color: #005a35;"></div>
+          <p><strong>#005a35</strong></p>
+          <p>Deep Green</p>
+          <p class="usage">Hover states, border accents, active nav links</p>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background-color: #ffffff; border: 1px solid #ccc;"></div>
+          <p><strong>#ffffff</strong></p>
+          <p>White</p>
+          <p class="usage">Card backgrounds, header text, button text</p>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background-color: #f5f5f5; border: 1px solid #ccc;"></div>
+          <p><strong>#f5f5f5</strong></p>
+          <p>Light Gray</p>
+          <p class="usage">Page background, alternating section backgrounds</p>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background-color: #222222;"></div>
+          <p><strong>#222222</strong></p>
+          <p>Dark Charcoal</p>
+          <p class="usage">Body text, product descriptions, captions, labels</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="plan-section">
+      <h2>Typography</h2>
+      <p>Two fonts are used across the site for clear visual hierarchy and readability:</p>
+
+      <div class="font-demo">
+        <div class="font-block">
+          <p class="font-name">Merriweather Bold 700 — Headings</p>
+          <p class="font-sample merriweather-bold">Zone – Explore. Filter. Discover.</p>
+          <p class="usage">Applied to: page title (h1), section headings (h2), card titles</p>
+        </div>
+        <div class="font-block">
+          <p class="font-name">Roboto Regular 400 — Body Text</p>
+          <p class="font-sample roboto-regular">Browse our curated collection of products, filter by category, and save your favourites for later.</p>
+          <p class="usage">Applied to: paragraphs, product descriptions, navigation links, footer</p>
+        </div>
+        <div class="font-block">
+          <p class="font-name">Roboto Bold 700 — Labels &amp; Emphasis</p>
+          <p class="font-sample roboto-bold">Category: Beginner Kit &nbsp;|&nbsp; Price: ₦45,000</p>
+          <p class="usage">Applied to: product labels, pricing, call-to-action text, filter buttons</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wireframes -->
+    <section class="plan-section">
+      <h2>Wireframes</h2>
+      <p>
+        The wireframes below represent the Zone home page layout in both 
+        mobile and desktop views. These serve as the structural blueprint 
+        for the final project build.
+      </p>
+
+      <div class="wireframe-container">
+
+        <!-- Mobile Wireframe -->
+        <div class="wireframe-wrap">
+          <h3>Mobile View</h3>
+          <svg viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" class="wireframe-svg mobile-svg">
+            <!-- Frame -->
+            <rect x="5" y="5" width="210" height="430" rx="12" fill="#f0f0f0" stroke="#008751" stroke-width="2"/>
+            <!-- Header -->
+            <rect x="15" y="15" width="190" height="38" rx="4" fill="#008751"/>
+            <text x="60" y="38" fill="white" font-size="12" font-family="Roboto" font-weight="700">Zone</text>
+            <text x="170" y="38" fill="white" font-size="18" font-family="Roboto">☰</text>
+            <!-- Hero Banner -->
+            <rect x="15" y="61" width="190" height="65" rx="4" fill="#cccccc"/>
+            <text x="110" y="97" text-anchor="middle" fill="#555" font-size="10" font-family="Roboto">Hero Banner</text>
+            <text x="110" y="112" text-anchor="middle" fill="#555" font-size="9" font-family="Roboto">Tagline text here</text>
+            <!-- Filter bar -->
+            <rect x="15" y="134" width="190" height="24" rx="4" fill="#e0e0e0"/>
+            <text x="110" y="150" text-anchor="middle" fill="#333" font-size="9" font-family="Roboto">All | Beginner | Advanced | Price</text>
+            <!-- Product cards -->
+            <rect x="15" y="166" width="190" height="65" rx="4" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+            <rect x="15" y="166" width="190" height="20" rx="4" fill="#008751"/>
+            <text x="110" y="180" text-anchor="middle" fill="white" font-size="9" font-family="Roboto">Product Name</text>
+            <text x="110" y="205" text-anchor="middle" fill="#333" font-size="8" font-family="Roboto">Category | Price | Details</text>
+
+            <rect x="15" y="239" width="190" height="65" rx="4" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+            <rect x="15" y="239" width="190" height="20" rx="4" fill="#008751"/>
+            <text x="110" y="253" text-anchor="middle" fill="white" font-size="9" font-family="Roboto">Product Name</text>
+            <text x="110" y="278" text-anchor="middle" fill="#333" font-size="8" font-family="Roboto">Category | Price | Details</text>
+
+            <rect x="15" y="312" width="190" height="65" rx="4" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+            <rect x="15" y="312" width="190" height="20" rx="4" fill="#008751"/>
+            <text x="110" y="326" text-anchor="middle" fill="white" font-size="9" font-family="Roboto">Product Name</text>
+            <text x="110" y="351" text-anchor="middle" fill="#333" font-size="8" font-family="Roboto">Category | Price | Details</text>
+
+            <!-- Footer -->
+            <rect x="15" y="385" width="190" height="38" rx="4" fill="#008751"/>
+            <text x="110" y="408" text-anchor="middle" fill="white" font-size="8" font-family="Roboto">© 2026 Zone | Esomojumi Sunday Emmanuel</text>
+          </svg>
+        </div>
+
+        <!-- Desktop Wireframe -->
+        <div class="wireframe-wrap">
+          <h3>Desktop View</h3>
+          <svg viewBox="0 0 440 310" xmlns="http://www.w3.org/2000/svg" class="wireframe-svg desktop-svg">
+            <!-- Frame -->
+            <rect x="5" y="5" width="430" height="300" rx="6" fill="#f0f0f0" stroke="#008751" stroke-width="2"/>
+            <!-- Header -->
+            <rect x="15" y="15" width="410" height="38" rx="4" fill="#008751"/>
+            <text x="60" y="38" fill="white" font-size="13" font-family="Roboto" font-weight="700">Zone</text>
+            <text x="280" y="38" fill="white" font-size="9" font-family="Roboto">Home | Beginner | Advanced | Contact</text>
+            <!-- Hero -->
+            <rect x="15" y="61" width="410" height="55" rx="4" fill="#cccccc"/>
+            <text x="220" y="89" text-anchor="middle" fill="#555" font-size="10" font-family="Roboto">Hero Banner – Explore. Filter. Discover.</text>
+            <!-- Filter bar -->
+            <rect x="15" y="124" width="410" height="22" rx="4" fill="#e0e0e0"/>
+            <text x="220" y="139" text-anchor="middle" fill="#333" font-size="9" font-family="Roboto">Filter: All | Beginner | Intermediate | Advanced | Price Range</text>
+            <!-- 3 column grid -->
+            <rect x="15" y="154" width="125" height="95" rx="4" fill="#ffffff" stroke="#ccc"/>
+            <rect x="15" y="154" width="125" height="22" rx="4" fill="#008751"/>
+            <text x="77" y="169" text-anchor="middle" fill="white" font-size="9" font-family="Roboto">Product 1</text>
+            <text x="77" y="210" text-anchor="middle" fill="#333" font-size="8" font-family="Roboto">Category | Price</text>
+
+            <rect x="152" y="154" width="125" height="95" rx="4" fill="#ffffff" stroke="#ccc"/>
+            <rect x="152" y="154" width="125" height="22" rx="4" fill="#008751"/>
+            <text x="214" y="169" text-anchor="middle" fill="white" font-size="9" font-family="Roboto">Product 2</text>
+            <text x="214" y="210" text-anchor="middle" fill="#333" font-size="8" font-family="Roboto">Category | Price</text>
+
+            <rect x="289" y="154" width="125" height="95" rx="4" fill="#ffffff" stroke="#ccc"/>
+            <rect x="289" y="154" width="125" height="22" rx="4" fill="#008751"/>
+            <text x="351" y="169" text-anchor="middle" fill="white" font-size="9" font-family="Roboto">Product 3</text>
+            <text x="351" y="210" text-anchor="middle" fill="#333" font-size="8" font-family="Roboto">Category | Price</text>
+
+            <!-- Footer -->
+            <rect x="15" y="257" width="410" height="38" rx="4" fill="#008751"/>
+            <text x="220" y="280" text-anchor="middle" fill="white" font-size="8" font-family="Roboto">© 2026 Esomojumi Sunday Emmanuel | Zone – Interactive Product Showcase</text>
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> Esomojumi Sunday Emmanuel | Zone – Site Plan | WDD 131</p>
+  </footer>
+
+  <script>
+    document.querySelector("#currentyear").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
