@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for submitting your product review on Zone. Your feedback helps the community.">
+  <meta name="author" content="Esomojumi Sunday Emmanuel">
+  <title>Review Submitted – Zone Interactive Showcase</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚙️</span>
+        <span class="logo-text">Zone</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="form.html" class="active">Review</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>Review Submitted</h1>
+    </section>
+
+    <section class="form-section">
+      <div class="confirmation-card">
+        <p class="confirm-icon">✅</p>
+        <h2>Thank You!</h2>
+        <p>Your product review has been successfully submitted.</p>
+        <p class="review-count">You have submitted <strong><span id="review-count"></span></strong> review(s) so far.</p>
+        <a href="form.html" class="btn-primary">Submit Another Review</a>
+        <a href="products.html" class="btn-secondary" style="margin-top:0.5rem;">Back to Products</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© <span id="currentyear"></span> Esomojumi Sunday Emmanuel | Zone – Interactive Product Showcase</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="form.html">Review</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

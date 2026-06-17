@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zone – Interactive Product Showcase. Browse curated robotics kits and tech gadgets. Filter by category, save your favourites, and explore what's right for you.">
+  <meta name="author" content="Esomojumi Sunday Emmanuel">
+  <title>Zone – Interactive Product Showcase</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/products.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚙️</span>
+        <span class="logo-text">Zone</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="form.html">Review</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Explore. Filter. Discover.</h1>
+        <p>Curated robotics kits and tech gadgets for every skill level — from first-time builders to advanced engineers.</p>
+        <a href="products.html" class="btn-primary">Browse All Products</a>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-section" aria-label="Filter products by category">
+      <div class="filter-inner">
+        <span class="filter-label">Filter:</span>
+        <div class="filter-buttons" id="homeFilterButtons">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="Beginner">Beginner</button>
+          <button class="filter-btn" data-category="Intermediate">Intermediate</button>
+          <button class="filter-btn" data-category="Advanced">Advanced</button>
+          <button class="filter-btn" data-category="Gadget">Gadgets</button>
+          <button class="filter-btn" data-category="Accessory">Accessories</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products-section">
+      <h2 class="section-title">Featured Products</h2>
+      <div class="product-grid" id="productGrid">
+        <!-- Rendered by products.js -->
+      </div>
+      <div class="no-results hidden" id="noResults">
+        <p>No products found in this category.</p>
+      </div>
+    </section>
+
+    <!-- Features Strip -->
+    <section class="features-strip">
+      <div class="feature">
+        <span class="feature-icon">🚀</span>
+        <h3>Quality Kits</h3>
+        <p>Every product is sourced and tested for reliability and learning value.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🔍</span>
+        <h3>Smart Filtering</h3>
+        <p>Find exactly what you need — filter by category in one click.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">❤️</span>
+        <h3>Save Favourites</h3>
+        <p>Your favourite products are remembered across visits using localStorage.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© <span id="currentyear"></span> Esomojumi Sunday Emmanuel | Zone – Interactive Product Showcase</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="form.html">Review</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

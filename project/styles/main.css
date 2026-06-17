@@ -1,0 +1,738 @@
+/* ================================
+   ROOT & RESET
+================================ */
+:root {
+  --primary: #008751;
+  --primary-dark: #005a35;
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --text-dark: #222222;
+  --border: #cccccc;
+  --required: #c62828;
+  --optional: #555555;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* ================================
+   HEADER & NAV
+================================ */
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.logo-text {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Hamburger toggle */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Nav */
+#mainNav {
+  width: 100%;
+  display: none;
+}
+
+#mainNav.open {
+  display: block;
+}
+
+#mainNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0.5rem 0;
+}
+
+#mainNav ul li a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+#mainNav ul li a:hover,
+#mainNav ul li a.active {
+  border-bottom-color: var(--white);
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Page hero (inner pages) */
+.page-hero {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-family: "Merriweather", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.95rem;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--primary);
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s, color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--light-gray);
+}
+
+.btn-secondary {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: var(--primary);
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* ================================
+   FILTER BAR
+================================ */
+.filter-section {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0.8rem 1rem;
+}
+
+.filter-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.filter-btn.active {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+/* ================================
+   RESULTS BAR
+================================ */
+.results-bar {
+  max-width: 1100px;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--optional);
+}
+
+/* ================================
+   PRODUCT GRID & CARDS
+================================ */
+.products-section {
+  max-width: 1100px;
+  margin: 1rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-family: "Merriweather", serif;
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.product-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.13);
+}
+
+.card-img-wrap {
+  position: relative;
+  background-color: var(--light-gray);
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-category-badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fav-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  background: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: transform 0.15s;
+}
+
+.fav-btn:hover {
+  transform: scale(1.15);
+}
+
+.fav-btn.saved {
+  color: #e53935;
+}
+
+.card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: #555555;
+  margin-bottom: 0.8rem;
+  flex: 1;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.card-price {
+  color: var(--primary-dark);
+}
+
+.card-rating {
+  color: #f9a825;
+}
+
+/* No results */
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: var(--optional);
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ================================
+   FEATURES STRIP
+================================ */
+.features-strip {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature {
+  text-align: center;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feature h3 {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.feature p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ================================
+   FAVOURITES SECTION
+================================ */
+.favourites-section {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.favourites-section h2 {
+  font-family: "Merriweather", serif;
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.favourites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.fav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--light-gray);
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.fav-item-name {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.fav-item-price {
+  color: var(--primary-dark);
+}
+
+.fav-empty {
+  color: var(--optional);
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+/* ================================
+   FORM SECTION
+================================ */
+.form-section {
+  max-width: 620px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.review-form,
+.confirmation-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--primary);
+}
+
+select,
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+  border-color: var(--primary);
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: 700;
+  color: var(--primary);
+  padding: 0 0.4rem;
+}
+
+.rating-group {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.rating-group input[type="radio"] {
+  display: none;
+}
+
+.rating-group label {
+  color: #cccccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.15s;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.rating-group input[type="radio"]:checked ~ label,
+.rating-group label:hover,
+.rating-group label:hover ~ label {
+  color: #f9a825;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--primary);
+}
+
+.required {
+  color: var(--required);
+}
+
+.optional {
+  color: var(--optional);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Confirmation card */
+.confirmation-card {
+  text-align: center;
+}
+
+.confirm-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-card h2 {
+  font-family: "Merriweather", serif;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.confirmation-card p {
+  margin-bottom: 0.6rem;
+  color: var(--text-dark);
+}
+
+.review-count {
+  color: var(--primary-dark);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-card .btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-card .btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-inner p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: var(--white);
+}
