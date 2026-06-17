@@ -15,7 +15,7 @@ const products = [
     price: 45000,
     rating: 4.6,
     description: "The perfect entry point into electronics and coding. Includes an Arduino Uno, breadboard, sensors, and a step-by-step project guide.",
-    image: "images/arduino-starter-kit.png"
+    image: "images/arduino-starter-kit.webp"
   },
   {
     id: "bk-002",
@@ -24,7 +24,7 @@ const products = [
     price: 18500,
     rating: 4.3,
     description: "A bundle of 20 essential sensors including temperature, motion, light, and sound — ideal for first-time builders.",
-    image: "images/basic-sensor-pack.png"
+    image: "images/basic-sensor-pack.webp"
   },
   {
     id: "bk-003",
@@ -33,7 +33,7 @@ const products = [
     price: 28000,
     rating: 4.5,
     description: "Build and program your own robot car from scratch. Features obstacle avoidance and remote control modes.",
-    image: "images/led-robotics-car.png"
+    image: "images/led-robotics-car.webp"
   },
   {
     id: "ik-001",
@@ -42,7 +42,7 @@ const products = [
     price: 89000,
     rating: 4.8,
     description: "A complete Raspberry Pi 4 package including power supply, SD card, case, and beginner project guide for Linux and Python.",
-    image: "images/raspberry-pi-4.png"
+    image: "images/raspberry-pi-4.webp"
   },
   {
     id: "ik-002",
@@ -51,7 +51,7 @@ const products = [
     price: 67500,
     rating: 4.4,
     description: "A programmable 4-axis robot arm with servo motors and a control board. Compatible with Arduino and Raspberry Pi.",
-    image: "images/robot-arm-kit.png"
+    image: "images/robot-arm-kit.webp"
   },
   {
     id: "ik-003",
@@ -60,7 +60,7 @@ const products = [
     price: 54000,
     rating: 4.2,
     description: "Control lights, fans, and appliances wirelessly. Includes ESP8266 Wi-Fi modules, relays, and MQTT integration guide.",
-    image: "images/smart-home-kit.png"
+    image: "images/smart-home-kit.webp"
   },
   {
     id: "ak-001",
@@ -69,7 +69,7 @@ const products = [
     price: 138000,
     rating: 4.9,
     description: "A dedicated machine learning camera module capable of real-time object detection, facial recognition, and edge AI inference.",
-    image: "images/ai-vision-module.png"
+    image: "images/ai-vision-module.webp"
   },
   {
     id: "ak-002",
@@ -78,7 +78,7 @@ const products = [
     price: 195000,
     rating: 4.7,
     description: "Build a fully functional quadcopter from components. Includes flight controller, motors, ESCs, frame, and programming guide.",
-    image: "images/drone-build-kit.png"
+    image: "images/drone-build-kit.webp"
   },
   {
     id: "tg-001",
@@ -87,7 +87,7 @@ const products = [
     price: 32000,
     rating: 4.5,
     description: "True wireless earbuds with active noise cancellation, 24-hour battery life, and IPX5 water resistance.",
-    image: "images/wireless-earbuds.png"
+    image: "images/wireless-earbuds.webp"
   },
   {
     id: "tg-002",
