@@ -96,7 +96,7 @@ const products = [
     price: 24500,
     rating: 4.6,
     description: "A 20,000mAh power bank with 65W USB-C PD fast charging, dual USB-A ports, and LED power display.",
-    image: "images/power-bank.jpg"
+    image: "images/power-bank.webp"
   },
   {
     id: "ac-001",
@@ -105,7 +105,7 @@ const products = [
     price: 19000,
     rating: 4.4,
     description: "Expand your laptop with HDMI 4K, 3x USB-A, SD card reader, Ethernet, and USB-C PD pass-through — all in one slim hub.",
-    image: "images/usb-hub.jpg"
+    image: "images/usb-hub.webp"
   },
   {
     id: "ac-002",
@@ -114,7 +114,7 @@ const products = [
     price: 16500,
     rating: 4.3,
     description: "A slim, rechargeable wireless keyboard with multi-device Bluetooth pairing and scissor-switch keys for quiet typing.",
-    image: "images/wireless-keyboard.jpg"
+    image: "images/wireless-keyboard.webp"
   }
 ];
 
@@ -164,19 +164,27 @@ function renderStars(rating) {
 
 // -----------------------------
 // Build a Product Card
+// index is the card's position in the current filtered list —
+// used so the first few images above the fold load eagerly
+// instead of fighting the browser's lazy-load timing
 // -----------------------------
-function buildProductCard(product) {
+function buildProductCard(product, index) {
   const saved = isFavourite(product.id);
   const card = document.createElement("article");
   card.classList.add("product-card");
   card.dataset.category = product.category;
+
+  const isAboveFold = index < 3;
+  const imgLoadAttrs = isAboveFold
+    ? 'loading="eager" fetchpriority="high"'
+    : 'loading="lazy"';
 
   card.innerHTML = `
     <div class="card-img-wrap">
       <img
         src="${product.image}"
         alt="${product.name}"
-        loading="lazy"
+        ${imgLoadAttrs}
         width="400"
         height="300"
       >
@@ -214,6 +222,8 @@ function buildProductCard(product) {
 
 // -----------------------------
 // Render Product Grid
+// Builds all cards into a DocumentFragment first so the browser
+// only does one layout pass instead of one per card
 // -----------------------------
 function renderProducts(category = "all") {
   const grid = document.querySelector("#productGrid");
@@ -222,19 +232,23 @@ function renderProducts(category = "all") {
 
   if (!grid) return;
 
-  grid.innerHTML = "";
-
   const filtered = category === "all"
     ? products
     : products.filter(p => p.category === category);
 
   if (filtered.length === 0) {
+    grid.innerHTML = "";
     noResults?.classList.remove("hidden");
   } else {
     noResults?.classList.add("hidden");
-    filtered.forEach(product => {
-      grid.appendChild(buildProductCard(product));
+
+    const fragment = document.createDocumentFragment();
+    filtered.forEach((product, index) => {
+      fragment.appendChild(buildProductCard(product, index));
     });
+
+    grid.innerHTML = "";
+    grid.appendChild(fragment);
   }
 
   if (resultsCount) {
@@ -251,7 +265,6 @@ function renderFavourites() {
   if (!listEl) return;
 
   const favIds = getFavourites();
-  listEl.innerHTML = "";
 
   if (favIds.length === 0) {
     listEl.innerHTML = `<p class="fav-empty">No favourites saved yet. Click ❤️ on any product card to save it here.</p>`;
@@ -259,6 +272,8 @@ function renderFavourites() {
   }
 
   const favProducts = products.filter(p => favIds.includes(p.id));
+  const fragment = document.createDocumentFragment();
+
   favProducts.forEach(p => {
     const item = document.createElement("div");
     item.classList.add("fav-item");
@@ -266,8 +281,11 @@ function renderFavourites() {
       <span class="fav-item-name">${p.name}</span>
       <span class="fav-item-price">${formatPrice(p.price)}</span>
     `;
-    listEl.appendChild(item);
+    fragment.appendChild(item);
   });
+
+  listEl.innerHTML = "";
+  listEl.appendChild(fragment);
 }
 
 // -----------------------------
@@ -282,7 +300,6 @@ function initFilterButtons() {
 
     const category = e.target.dataset.category;
 
-    // Update active state
     filterContainer.querySelectorAll(".filter-btn").forEach(btn => {
       btn.classList.remove("active");
     });
@@ -302,7 +319,6 @@ function initClearFavourites() {
   clearBtn.addEventListener("click", () => {
     localStorage.removeItem("zoneFavourites");
     renderFavourites();
-    // Refresh cards to update heart icons
     const activeBtn = document.querySelector(".filter-btn.active");
     const activeCategory = activeBtn ? activeBtn.dataset.category : "all";
     renderProducts(activeCategory);
@@ -311,8 +327,11 @@ function initClearFavourites() {
 
 // -----------------------------
 // Init on Page Load
+// renderProducts runs first and paints the main grid;
+// renderFavourites is deferred a frame so it doesn't
+// compete with the grid's initial paint
 // -----------------------------
 renderProducts();
 initFilterButtons();
-renderFavourites();
 initClearFavourites();
+requestAnimationFrame(() => renderFavourites());
