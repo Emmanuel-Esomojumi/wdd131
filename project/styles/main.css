@@ -1,3 +1,21 @@
+/* Font fallbacks matched to web font metrics — prevents layout
+   shift when Roboto/Merriweather swap in after loading */
+@font-face {
+  font-family: "Roboto Fallback";
+  src: local("Arial");
+  size-adjust: 100.06%;
+  ascent-override: 92.7%;
+  descent-override: 24.4%;
+}
+
+@font-face {
+  font-family: "Merriweather Fallback";
+  src: local("Georgia");
+  size-adjust: 109%;
+  ascent-override: 82%;
+  descent-override: 24%;
+}
+
 :root {
   --primary: #008751;
   --primary-dark: #005a35;
@@ -17,7 +35,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Roboto Fallback", sans-serif;
   background-color: var(--light-gray);
   color: var(--text-dark);
   line-height: 1.7;
@@ -56,7 +74,7 @@ header {
 }
 
 .logo-text {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--white);
@@ -131,7 +149,7 @@ header {
 }
 
 .hero h1 {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -153,7 +171,7 @@ header {
 }
 
 .page-hero h1 {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -277,7 +295,7 @@ header {
 }
 
 .section-title {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
   font-size: 1.4rem;
   color: var(--primary);
   margin-bottom: 1.2rem;
@@ -289,6 +307,7 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.2rem;
+  min-height: 200px;
 }
 
 /* product card */
@@ -310,7 +329,7 @@ header {
 .card-img-wrap {
   position: relative;
   background-color: var(--light-gray);
-  height: 180px;
+  aspect-ratio: 570 / 380;
   overflow: hidden;
 }
 
@@ -369,7 +388,7 @@ header {
 }
 
 .card-title {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--primary);
@@ -434,7 +453,7 @@ header {
 }
 
 .feature h3 {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
   font-size: 1rem;
   margin-bottom: 0.4rem;
 }
@@ -457,7 +476,7 @@ header {
 }
 
 .favourites-section h2 {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
   color: var(--primary);
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -653,7 +672,7 @@ input[type="submit"]:hover {
 }
 
 .confirmation-card h2 {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
   color: var(--primary);
   margin-bottom: 0.8rem;
 }
