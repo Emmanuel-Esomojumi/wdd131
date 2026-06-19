@@ -1,5 +1,4 @@
-/* Font fallbacks matched to web font metrics — prevents layout
-   shift when Roboto/Merriweather swap in after loading */
+/* fallback fonts so text doesn't jump when the google fonts load in */
 @font-face {
   font-family: "Roboto Fallback";
   src: local("Arial");
@@ -80,7 +79,7 @@ header {
   color: var(--white);
 }
 
-/* Hamburger toggle */
+/* hamburger button */
 .nav-toggle {
   display: flex;
   flex-direction: column;
@@ -101,7 +100,7 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Nav */
+/* nav menu */
 #mainNav {
   width: 100%;
   display: none;
@@ -135,7 +134,12 @@ header {
   border-bottom-color: var(--white);
 }
 
-/* hero banner */
+/* nav cta button - hidden on mobile, shown in large.css */
+.nav-cta {
+  display: none;
+}
+
+/* hero banner on homepage */
 .hero {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: var(--white);
@@ -162,12 +166,21 @@ header {
   color: var(--white);
 }
 
-/* hero for inner pages */
+/* small hero used on every other page */
 .page-hero {
   background-color: var(--primary);
   color: var(--white);
   padding: 2rem 1rem;
   text-align: center;
+}
+
+.breadcrumb {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0.5rem;
 }
 
 .page-hero h1 {
@@ -220,6 +233,35 @@ header {
 .btn-secondary:hover {
   background-color: var(--primary);
   color: var(--white);
+}
+
+/* stats strip on homepage */
+.stats-bar {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 1rem;
+}
+
+.stats-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: "Merriweather", "Merriweather Fallback", serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--optional);
 }
 
 /* filter bar */
@@ -418,7 +460,7 @@ header {
   color: #9c5e08;
 }
 
-/* No results */
+/* no results message */
 .no-results {
   text-align: center;
   padding: 2rem;
@@ -430,7 +472,7 @@ header {
   display: none;
 }
 
-/* features strip */
+/* features strip on homepage */
 .features-strip {
   background-color: var(--primary-dark);
   color: var(--white);
@@ -661,7 +703,7 @@ input[type="submit"]:hover {
   background-color: var(--primary-dark);
 }
 
-/* Confirmation card */
+/* confirmation card on review.html */
 .confirmation-card {
   text-align: center;
 }
@@ -699,42 +741,184 @@ input[type="submit"]:hover {
   background-color: var(--primary-dark);
 }
 
-/* footer */
-footer {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 1.5rem 1rem;
-  margin-top: 2rem;
+/* references page content */
+.content-section {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 1.8rem 1.5rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
 
-.footer-inner {
+.content-section h2 {
+  font-family: "Merriweather", "Merriweather Fallback", serif;
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.content-section h2:first-of-type {
+  margin-top: 0;
+}
+
+.content-section p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.content-section ul {
+  padding-left: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-section li {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.content-section a {
+  color: var(--primary-dark);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* about page - values cards */
+.values-section {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 1rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.value-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
   text-align: center;
+}
+
+.value-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.value-card h3 {
+  font-family: "Merriweather", "Merriweather Fallback", serif;
+  color: var(--primary);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 0.875rem;
+  color: #555555;
+}
+
+/* about page - bottom cta */
+.about-cta {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-family: "Merriweather", "Merriweather Fallback", serif;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.about-cta p {
+  margin-bottom: 1rem;
+}
+
+.about-cta .btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.about-cta .btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.cta-buttons {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.footer-inner p {
-  font-size: 0.875rem;
+/* footer */
+footer {
+  background-color: var(--primary);
   color: var(--white);
+  padding: 2rem 1rem 1.2rem;
+  margin-top: 2rem;
 }
 
-.footer-nav {
-  display: flex;
-  justify-content: center;
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
-  flex-wrap: wrap;
+  text-align: left;
 }
 
-.footer-nav a {
+.footer-col h3 {
+  font-family: "Merriweather", "Merriweather Fallback", serif;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-col a {
   color: var(--white);
-  text-decoration: underline;
-  font-size: 0.85rem;
-  transition: opacity 0.2s;
+  text-decoration: none;
+  font-size: 0.875rem;
+  opacity: 0.9;
 }
 
-.footer-nav a:hover {
-  opacity: 0.85;
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-brand p {
+  font-size: 0.875rem;
+  margin-top: 0.6rem;
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 1.5rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: var(--white);
 }

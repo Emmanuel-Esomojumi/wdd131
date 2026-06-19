@@ -34,9 +34,11 @@
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="form.html">Review</a></li>
           <li><a href="references.html">References</a></li>
         </ul>
+        <a href="form.html" class="nav-cta">Leave a Review</a>
       </nav>
     </div>
   </header>
@@ -49,6 +51,28 @@
         <h1>Explore. Filter. Discover.</h1>
         <p>Curated robotics kits and tech gadgets for every skill level — from first-time builders to advanced engineers.</p>
         <a href="products.html" class="btn-primary">Browse All Products</a>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-bar">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="12">0</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-label">Categories</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-label">Core Web Skills</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+          <span class="stat-label">Responsive Design</span>
+        </div>
       </div>
     </section>
 
@@ -100,14 +124,43 @@
   </main>
 
   <footer>
-    <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="logo">
+          <span class="logo-icon">⚙️</span>
+          <span class="logo-text">Zone</span>
+        </div>
+        <p>A class project showcasing robotics kits and gadgets, built for WDD 131.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">Review</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="products.html?category=Beginner">Beginner</a></li>
+          <li><a href="products.html?category=Intermediate">Intermediate</a></li>
+          <li><a href="products.html?category=Advanced">Advanced</a></li>
+          <li><a href="products.html?category=Gadget">Gadgets</a></li>
+          <li><a href="products.html?category=Accessory">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>📍 Lagos, Nigeria</p>
+        <p>✉️ hello@zoneshowcase.com/p>
+      </div>
+    </div>
+    <div class="footer-bottom">
       <p>© <span id="currentyear"></span> Esomojumi Sunday Emmanuel | Zone – Interactive Product Showcase</p>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="form.html">Review</a>
-        <a href="references.html">References</a>
-      </nav>
+      <p id="lastModified"></p>
     </div>
   </footer>
 

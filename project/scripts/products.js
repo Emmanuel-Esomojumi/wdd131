@@ -1,12 +1,9 @@
 // ================================
 // PRODUCTS.JS
-// Handles: product data, card rendering,
-// category filtering, localStorage favourites
+// product data, card rendering, filtering, favourites
 // ================================
 
-// -----------------------------
-// Product Data — Array of Objects
-// -----------------------------
+// product list
 const products = [
   {
     id: "bk-001",
@@ -118,9 +115,7 @@ const products = [
   }
 ];
 
-// -----------------------------
-// localStorage Helpers
-// -----------------------------
+// favourites helpers (localStorage)
 function getFavourites() {
   const stored = localStorage.getItem("zoneFavourites");
   return stored ? JSON.parse(stored) : [];
@@ -145,16 +140,12 @@ function toggleFavourite(productId) {
   return favs.includes(productId);
 }
 
-// -----------------------------
-// Format Price in Naira
-// -----------------------------
+// format price as naira
 function formatPrice(amount) {
   return `₦${amount.toLocaleString("en-NG")}`;
 }
 
-// -----------------------------
-// Render Star Rating
-// -----------------------------
+// turn a number rating into stars
 function renderStars(rating) {
   const full = Math.floor(rating);
   const half = rating % 1 >= 0.5 ? 1 : 0;
@@ -162,20 +153,15 @@ function renderStars(rating) {
   return `${"★".repeat(full)}${"½".repeat(half)}${"☆".repeat(empty)} (${rating})`;
 }
 
-// -----------------------------
-// Build a Product Card
-// index is the card's position in the current filtered list —
-// used so the first few images above the fold load eagerly
-// instead of fighting the browser's lazy-load timing
-// -----------------------------
+// build one product card
+// first 3 cards load images eagerly, the rest lazy load
 function buildProductCard(product, index) {
   const saved = isFavourite(product.id);
   const card = document.createElement("article");
   card.classList.add("product-card");
   card.dataset.category = product.category;
 
-  const isAboveFold = index < 3;
-  const imgLoadAttrs = isAboveFold
+  const imgLoadAttrs = index < 3
     ? 'loading="eager" fetchpriority="high"'
     : 'loading="lazy"';
 
@@ -206,7 +192,6 @@ function buildProductCard(product, index) {
     </div>
   `;
 
-  // Favourite button event
   const favBtn = card.querySelector(".fav-btn");
   favBtn.addEventListener("click", () => {
     const nowSaved = toggleFavourite(product.id);
@@ -220,11 +205,7 @@ function buildProductCard(product, index) {
   return card;
 }
 
-// -----------------------------
-// Render Product Grid
-// Builds all cards into a DocumentFragment first so the browser
-// only does one layout pass instead of one per card
-// -----------------------------
+// render the product grid for a given category
 function renderProducts(category = "all") {
   const grid = document.querySelector("#productGrid");
   const noResults = document.querySelector("#noResults");
@@ -242,6 +223,7 @@ function renderProducts(category = "all") {
   } else {
     noResults?.classList.add("hidden");
 
+    // build cards first, then add them all at once
     const fragment = document.createDocumentFragment();
     filtered.forEach((product, index) => {
       fragment.appendChild(buildProductCard(product, index));
@@ -257,9 +239,7 @@ function renderProducts(category = "all") {
   }
 }
 
-// -----------------------------
-// Render Favourites Panel
-// -----------------------------
+// render the saved favourites list
 function renderFavourites() {
   const listEl = document.querySelector("#favouritesList");
   if (!listEl) return;
@@ -288,9 +268,7 @@ function renderFavourites() {
   listEl.appendChild(fragment);
 }
 
-// -----------------------------
-// Filter Button Logic
-// -----------------------------
+// filter buttons click handler
 function initFilterButtons() {
   const filterContainer = document.querySelector("#homeFilterButtons");
   if (!filterContainer) return;
@@ -309,9 +287,7 @@ function initFilterButtons() {
   });
 }
 
-// -----------------------------
-// Clear Favourites Button
-// -----------------------------
+// clear favourites button
 function initClearFavourites() {
   const clearBtn = document.querySelector("#clearFavourites");
   if (!clearBtn) return;
@@ -325,13 +301,47 @@ function initClearFavourites() {
   });
 }
 
-// -----------------------------
-// Init on Page Load
-// renderProducts runs first and paints the main grid;
-// renderFavourites is deferred a frame so it doesn't
-// compete with the grid's initial paint
-// -----------------------------
+// check the url for a category param (used by footer category links)
+// e.g. products.html?category=Beginner
+function applyCategoryFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
+  if (!category) return;
+
+  const btn = document.querySelector(`.filter-btn[data-category="${category}"]`);
+  if (!btn) return;
+
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  renderProducts(category);
+}
+
+// count up the homepage stat numbers from 0 to their target
+function animateStats() {
+  const stats = document.querySelectorAll(".stat-number");
+  if (stats.length === 0) return;
+
+  stats.forEach(stat => {
+    const target = parseInt(stat.dataset.target);
+    const suffix = stat.dataset.suffix || "";
+    const step = Math.ceil(target / 40);
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      stat.textContent = current + suffix;
+    }, 30);
+  });
+}
+
+// run everything on page load
 renderProducts();
+applyCategoryFromURL();
 initFilterButtons();
 initClearFavourites();
-requestAnimationFrame(() => renderFavourites());
+renderFavourites();
+animateStats();

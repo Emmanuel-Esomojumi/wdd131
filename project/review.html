@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Thank you for submitting your product review on Zone. Your feedback helps the community.">
   <meta name="author" content="Esomojumi Sunday Emmanuel">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <title>Review Submitted – Zone Interactive Showcase</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +33,11 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
-          <li><a href="form.html" class="active">Review</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">Review</a></li>
           <li><a href="references.html">References</a></li>
         </ul>
+        <a href="form.html" class="nav-cta">Leave a Review</a>
       </nav>
     </div>
   </header>
@@ -42,6 +45,7 @@
   <main>
 
     <section class="page-hero">
+      <span class="breadcrumb">Home &rsaquo; Review</span>
       <h1>Review Submitted</h1>
     </section>
 
@@ -59,14 +63,43 @@
   </main>
 
   <footer>
-    <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="logo">
+          <span class="logo-icon">⚙️</span>
+          <span class="logo-text">Zone</span>
+        </div>
+        <p>A class project showcasing robotics kits and gadgets, built for WDD 131.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">Review</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="products.html?category=Beginner">Beginner</a></li>
+          <li><a href="products.html?category=Intermediate">Intermediate</a></li>
+          <li><a href="products.html?category=Advanced">Advanced</a></li>
+          <li><a href="products.html?category=Gadget">Gadgets</a></li>
+          <li><a href="products.html?category=Accessory">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>📍 Lagos, Nigeria</p>
+        <p>✉️ hello@zoneshowcase.example</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
       <p>© <span id="currentyear"></span> Esomojumi Sunday Emmanuel | Zone – Interactive Product Showcase</p>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="form.html">Review</a>
-        <a href="references.html">References</a>
-      </nav>
+      <p id="lastModified"></p>
     </div>
   </footer>
 

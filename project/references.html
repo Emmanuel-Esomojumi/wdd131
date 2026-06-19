@@ -5,61 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="References and image credits for the Zone Interactive Product Showcase website.">
   <meta name="author" content="Esomojumi Sunday Emmanuel">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <title>References – Zone Interactive Showcase</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
 
-  <h1>References &amp; Credits</h1>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚙️</span>
+        <span class="logo-text">Zone</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">Review</a></li>
+          <li><a href="references.html" class="active">References</a></li>
+        </ul>
+        <a href="form.html" class="nav-cta">Leave a Review</a>
+      </nav>
+    </div>
+  </header>
 
-  <p>The following sources were used for product images, descriptions, and inspiration in building the Zone Interactive Product Showcase.</p>
+  <main>
 
-  <h2>Product Images</h2>
-  <ul>
-    <li>
-      Placeholder product images sourced from
-      <a href="https://picsum.photos" target="_blank" rel="noopener">Lorem Picsum</a> (picsum.photos) –
-      Free-to-use placeholder image service.
-    </li>
-  </ul>
+    <section class="page-hero">
+      <span class="breadcrumb">Home &rsaquo; References</span>
+      <h1>References &amp; Credits</h1>
+      <p>Sources used for product images, descriptions, and inspiration.</p>
+    </section>
 
-  <h2>Product Information</h2>
-  <ul>
-    <li>
-      Arduino Starter Kit description inspired by
-      <a href="https://store.arduino.cc" target="_blank" rel="noopener">Arduino Official Store</a> (store.arduino.cc).
-    </li>
-    <li>
-      Raspberry Pi product details inspired by
-      <a href="https://www.raspberrypi.com" target="_blank" rel="noopener">Raspberry Pi Foundation</a> (raspberrypi.com).
-    </li>
-    <li>
-      Drone and robotics kit inspiration from
-      <a href="https://www.dji.com" target="_blank" rel="noopener">DJI</a> (dji.com).
-    </li>
-    <li>
-      Smart power bank and accessory descriptions inspired by
-      <a href="https://www.anker.com" target="_blank" rel="noopener">Anker</a> (anker.com).
-    </li>
-  </ul>
+    <section class="content-section">
 
-  <h2>Fonts</h2>
-  <ul>
-    <li>
-      Merriweather and Roboto typefaces from
-      <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a> (fonts.google.com).
-    </li>
-  </ul>
+      <h2>Product Images</h2>
+      <p>
+        Product images on this site were created using AI image-generation tools rather
+        than sourced from real product photography or stock image libraries.
+      </p>
 
-  <h2>Course Resources</h2>
-  <ul>
-    <li>
-      WDD 131 – Dynamic Web Fundamentals course materials from
-      <a href="https://byui-cse.github.io/wdd131-ww-course/" target="_blank" rel="noopener">BYU-Idaho CSE</a>.
-    </li>
-  </ul>
+      <h2>Product Information</h2>
+      <ul>
+        <li>
+          Arduino Starter Kit description inspired by
+          <a href="https://store.arduino.cc" target="_blank" rel="noopener">Arduino Official Store</a> (store.arduino.cc).
+        </li>
+        <li>
+          Raspberry Pi product details inspired by
+          <a href="https://www.raspberrypi.com" target="_blank" rel="noopener">Raspberry Pi Foundation</a> (raspberrypi.com).
+        </li>
+        <li>
+          Drone and robotics kit inspiration from
+          <a href="https://www.dji.com" target="_blank" rel="noopener">DJI</a> (dji.com).
+        </li>
+        <li>
+          Smart power bank and accessory descriptions inspired by
+          <a href="https://www.anker.com" target="_blank" rel="noopener">Anker</a> (anker.com).
+        </li>
+      </ul>
 
-  <p><a href="index.html">← Return to Home</a></p>
+      <h2>Fonts</h2>
+      <ul>
+        <li>
+          Merriweather and Roboto typefaces from
+          <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a> (fonts.google.com).
+        </li>
+      </ul>
+
+      <h2>Course Resources</h2>
+      <ul>
+        <li>
+          WDD 131 – Dynamic Web Fundamentals course materials from
+          <a href="https://byui-cse.github.io/wdd131-ww-course/" target="_blank" rel="noopener">BYU-Idaho CSE</a>.
+        </li>
+      </ul>
+
+      <a href="index.html" class="back-link">← Return to Home</a>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="logo">
+          <span class="logo-icon">⚙️</span>
+          <span class="logo-text">Zone</span>
+        </div>
+        <p>A class project showcasing robotics kits and gadgets, built for WDD 131.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">Review</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="products.html?category=Beginner">Beginner</a></li>
+          <li><a href="products.html?category=Intermediate">Intermediate</a></li>
+          <li><a href="products.html?category=Advanced">Advanced</a></li>
+          <li><a href="products.html?category=Gadget">Gadgets</a></li>
+          <li><a href="products.html?category=Accessory">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>📍 Lagos, Nigeria</p>
+        <p>✉️ hello@zoneshowcase.example</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="currentyear"></span> Esomojumi Sunday Emmanuel | Zone – Interactive Product Showcase</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
 
 </body>
 </html>

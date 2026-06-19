@@ -30,6 +30,18 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ================================
@@ -37,13 +49,15 @@
 ================================ */
 @media screen and (min-width: 900px) {
 
-  /* Header nav — horizontal */
+  /* header nav goes horizontal */
   .nav-toggle {
     display: none;
   }
 
   #mainNav {
-    display: block !important;
+    display: flex !important;
+    align-items: center;
+    gap: 1.5rem;
     width: auto;
   }
 
@@ -57,7 +71,23 @@
     padding: 0.3rem 0;
   }
 
-  /* Hero */
+  .nav-cta {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.4rem 1.1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+
+  .nav-cta:hover {
+    background-color: var(--light-gray);
+  }
+
+  /* hero */
   .hero {
     padding: 5rem 2rem;
   }
@@ -70,12 +100,12 @@
     font-size: 1.15rem;
   }
 
-  /* Product grid — 3 columns */
+  /* product grid - 3 columns */
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Form wider */
+  /* form wider */
   .form-section {
     max-width: 720px;
   }
@@ -87,16 +117,26 @@
     display: block;
   }
 
-  /* Footer horizontal */
-  .footer-inner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
+  /* footer goes 4 columns */
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .footer-nav {
-    justify-content: flex-end;
+  /* values cards - 3 columns */
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* about page buttons sit side by side */
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-secondary {
+    width: auto;
+    display: inline-block;
   }
 }
 
